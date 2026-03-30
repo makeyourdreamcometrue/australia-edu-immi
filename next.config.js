@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
+  // No static export - we need server for database (Prisma)
+  // output: 'export', // REMOVED - needs server-side rendering
 }
 
 module.exports = nextConfig
