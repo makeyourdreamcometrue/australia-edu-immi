@@ -1,20 +1,7 @@
 import Link from 'next/link'
-import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient()
-
-async function getArticles() {
-  const articles = await prisma.article.findMany({
-    where: { published: true },
-    orderBy: { createdAt: 'desc' },
-    take: 10,
-  })
-  return articles
-}
-
-export default async function Home() {
-  const articles = await getArticles()
-
+// Static home page - no database connection needed for initial deploy
+export default function Home() {
   return (
     <div>
       {/* Hero Section */}
@@ -53,37 +40,31 @@ export default async function Home() {
         </Link>
       </section>
 
-      {/* Latest Articles */}
+      {/* Latest Articles - Static placeholder for initial deploy */}
       <section>
         <h3 className="text-xl font-bold mb-4">最新资讯</h3>
-        {articles.length === 0 ? (
-          <div className="bg-white p-8 rounded-lg text-center text-gray-500">
-            <p>暂无文章</p>
-            <p className="text-sm mt-2">内容正在获取中，请稍后再访问</p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {articles.map((article) => (
-              <article key={article.id} className="bg-white p-6 rounded-lg shadow hover:shadow-md">
-                <Link href={`/article/${article.id}`}>
-                  <h4 className="text-lg font-semibold text-blue-800 hover:underline">{article.title}</h4>
-                </Link>
-                <p className="text-gray-600 mt-2">{article.summary}</p>
-                <div className="flex gap-2 mt-3">
-                  {article.tags.map((tag) => (
-                    <span key={tag} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p className="text-xs text-gray-400 mt-3">
-                  来源: {article.source} | {new Date(article.createdAt).toLocaleDateString('zh-CN')}
-                </p>
-              </article>
-            ))}
-          </div>
-        )}
+        <div className="bg-white p-8 rounded-lg text-center text-gray-500">
+          <p className="text-lg">📰 网站正在建设中</p>
+          <p className="text-sm mt-2">内容获取功能即将上线，请稍后再访问</p>
+        </div>
+      </section>
+
+      {/* Info Section */}
+      <section className="mt-8 bg-blue-50 p-6 rounded-lg">
+        <h3 className="text-lg font-bold text-blue-800 mb-3">信息来源</h3>
+        <ul className="text-sm text-gray-600 space-y-1">
+          <li>• 澳大利亚移民局 (Department of Home Affairs)</li>
+          <li>• Study Australia 澳大利亚教育署</li>
+          <li>• 新南威尔士州政府</li>
+          <li>• 维多利亚州政府</li>
+          <li>• 昆士兰州政府</li>
+          <li>• 西澳大利亚州政府</li>
+        </ul>
       </section>
     </div>
   )
 }
+
+// Export revalidate to enable ISR (Incremental Static Regeneration)
+// When database is connected, articles will be fetched via API routes
+export const revalidate = 3600 // Revalidate every hour
