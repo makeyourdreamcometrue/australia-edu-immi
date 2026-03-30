@@ -13,9 +13,9 @@ datasource db {
 model Article {
   id          String   @id @default(cuid())
   title       String
-  summary     String   @db.Text
-  content     String   @db.Text
-  impact      String   @db.Text
+  summary     String
+  content     String
+  impact      String
   source      String
   sourceUrl   String?
   tags        String[]
@@ -23,7 +23,6 @@ model Article {
   publishedAt DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  publishedAtDate DateTime?
   
   @@index([published])
   @@index([createdAt])
