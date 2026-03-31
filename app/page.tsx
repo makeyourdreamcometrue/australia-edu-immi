@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-// Static sample articles for immediate display
 const SAMPLE_ARTICLES = [
   {
     id: '1',
@@ -41,6 +40,86 @@ const SAMPLE_ARTICLES = [
     source: 'Study Australia',
     createdAt: '2026-03-27',
     tags: ['485工签', '毕业生工签']
+  },
+  {
+    id: '6',
+    title: '新南威尔士州担保职业清单更新',
+    summary: '新州政府更新技术移民担保职业清单，新增多个热门职业包括会计、IT和工程类。',
+    source: '新南威尔士州政府',
+    createdAt: '2026-03-26',
+    tags: ['190州担保', '491签证', '技术移民']
+  },
+  {
+    id: '7',
+    title: '澳大利亚配偶签证申请政策变化',
+    summary: '澳大利亚移民局对配偶签证审理政策进行调整，新增语言要求和担保责任规定。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-03-25',
+    tags: ['配偶签证', '820签证', '团聚移民']
+  },
+  {
+    id: '8',
+    title: '昆士兰州技术移民州担保最新动态',
+    summary: '昆州发布最新技术移民政策，重点关注医疗、教育和农业领域的人才引进。',
+    source: '昆士兰州政府',
+    createdAt: '2026-03-24',
+    tags: ['190州担保', '491签证', '技术移民']
+  },
+  {
+    id: '9',
+    title: '澳大利亚学生签证打工时长最新规定',
+    summary: '详解国际学生每两周工作48小时的政策细节，以及假期期间的特别规定。',
+    source: 'Study Australia',
+    createdAt: '2026-03-23',
+    tags: ['500学生签证', '留学签证', '打工规定']
+  },
+  {
+    id: '10',
+    title: '西澳大利亚州担保政策深度解析',
+    summary: '西澳政府公布最新州担保政策详解，包含190和491签证的详细申请要求。',
+    source: '西澳大利亚州政府',
+    createdAt: '2026-03-22',
+    tags: ['190州担保', '491签证', '技术移民']
+  },
+  {
+    id: '11',
+    title: '澳大利亚移民签证体检新要求',
+    summary: '澳大利亚移民局发布最新体检要求，新增部分体检项目和注意事项。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-03-21',
+    tags: ['签证体检', '移民健康', '500签证']
+  },
+  {
+    id: '12',
+    title: '澳大利亚偏远地区491签证优势分析',
+    summary: '详细分析491偏远地区签证的优势、要求以及如何获得额外加分。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-03-20',
+    tags: ['491签证', '偏远地区', '技术移民']
+  },
+  {
+    id: '13',
+    title: 'ACT堪培拉州担保最新邀请数据',
+    summary: 'ACT政府公布最新一轮州担保邀请数据，分析各职业的获邀分数趋势。',
+    source: 'ACT政府',
+    createdAt: '2026-03-19',
+    tags: ['190州担保', 'ACT担保', '堪培拉']
+  },
+  {
+    id: '14',
+    title: '澳大利亚语言考试要求更新',
+    summary: '澳大利亚移民局更新语言考试认可范围，新增多项英语考试成绩认可。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-03-18',
+    tags: ['语言要求', '雅思', 'PTE']
+  },
+  {
+    id: '15',
+    title: '澳大利亚毕业生工签续签最新政策',
+    summary: '485工签后续签政策详解，符合条件的毕业生可申请第二次485签证。',
+    source: 'Study Australia',
+    createdAt: '2026-03-17',
+    tags: ['485工签', '毕业生签证', '续签']
   }
 ]
 
@@ -87,7 +166,7 @@ export default function Home() {
 
       {/* Latest Articles */}
       <section>
-        <h3 className="text-xl font-bold mb-4">最新资讯</h3>
+        <h3 className="text-xl font-bold mb-4">最新资讯 ({articles.length}篇)</h3>
         <div className="space-y-4">
           {articles.map((article) => (
             <article key={article.id} className="bg-white p-6 rounded-lg shadow hover:shadow-md">
@@ -119,6 +198,8 @@ export default function Home() {
           <li>• 新南威尔士州政府</li>
           <li>• 维多利亚州政府</li>
           <li>• 昆士兰州政府</li>
+          <li>• 南澳大利亚州政府</li>
+          <li>• 西澳大利亚州政府</li>
         </ul>
       </section>
     </div>
