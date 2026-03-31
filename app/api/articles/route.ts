@@ -2,7 +2,9 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export async function GET(request) {
+export const dynamic = 'force-dynamic'
+
+export async function GET() {
   try {
     const articles = await prisma.article.findMany({
       where: { published: true },
