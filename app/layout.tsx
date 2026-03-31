@@ -21,6 +21,7 @@ export default function RootLayout({
               <a href="/" className="hover:underline">首页</a>
               <a href="/news" className="hover:underline">最新资讯</a>
               <a href="/visa" className="hover:underline">签证政策</a>
+              <a href="/education" className="hover:underline">教育资讯</a>
               <a href="/about" className="hover:underline">关于我们</a>
             </nav>
           </div>
