@@ -123,123 +123,171 @@ const SAMPLE_ARTICLES = [
   },
   {
     id: '16',
-    title: '澳大利亚雇主担保签证482最新政策',
-    summary: '详解482临时技能短缺签证的申请要求、职业列表和审理流程。',
+    title: '491偏远地区签证完整申请指南',
+    summary: '491签证申请条件、流程、所需材料以及各州担保要求的全面指南。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-16',
-    tags: ['482签证', '雇主担保', '工作签证']
+    tags: ['491签证', '偏远地区', '申请指南']
   },
   {
     id: '17',
-    title: '澳大利亚投资移民188签证政策解读',
-    summary: '188商业创新和投资签证各分支的详细申请要求和投资金额标准。',
+    title: '491签证与190签证区别对比',
+    summary: '详细对比491偏远地区州担保签证与190州担保签证的区别、优势和劣势。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-15',
-    tags: ['188签证', '投资移民', '商业签证']
+    tags: ['491签证', '190签证', '对比分析']
   },
   {
     id: '18',
-    title: '澳大利亚父母签证103排队类申请指南',
-    summary: '详解103父母移民签证的排队要求和申请流程。',
+    title: '491签证居住和工作要求详解',
+    summary: '详解491签证持有者在偏远地区的居住要求、工作要求以及如何满足转永居条件。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-14',
-    tags: ['103签证', '父母移民', '团聚签证']
+    tags: ['491签证', '居住要求', '工作要求']
   },
   {
     id: '19',
-    title: '澳大利亚签证申请费最新调整',
-    summary: '澳大利亚移民局公布最新签证申请费用标准，多种签证类型费用上调。',
+    title: '491签证如何获得额外加分',
+    summary: '491签证EOI加分技巧，包括州担保加分、偏远地区学习加分、配偶加分等。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-13',
-    tags: ['签证费用', '申请费', '涨价']
+    tags: ['491签证', 'EOI加分', '技术移民']
   },
   {
     id: '20',
-    title: '澳大利亚各州491签证政策对比分析',
-    summary: '对比分析澳大利亚各州491偏远地区州担保政策的差异和优势。',
-    source: '澳大利亚移民局 (Department of Home Affairs)',
+    title: '各州491签证政策对比',
+    summary: '澳大利亚各州491签证政策对比，包括职业列表、分数要求、审理周期等。',
+    source: '各州政府',
     createdAt: '2026-03-12',
     tags: ['491签证', '各州对比', '政策分析']
   },
   {
     id: '21',
-    title: '澳大利亚学生签证监护人590签证详解',
-    summary: '590学生监护人签证的申请要求、权利和注意事项。',
-    source: 'Study Australia',
+    title: '491签证转191永居签证全攻略',
+    summary: '491转191签证的条件、流程和注意事项，3年后如何获得澳大利亚永居。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-11',
-    tags: ['590签证', '监护人', '陪读签证']
+    tags: ['491转191', '转永居', 'PR']
   },
   {
     id: '22',
-    title: '澳大利亚技术职业列表最新变化',
-    summary: 'MLTSSL和STSOL职业列表更新，新增和移除部分职业。',
+    title: '491签证职业评估要求',
+    summary: '详解491签证所需的职业评估要求，不同职业的评估机构和标准。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-10',
-    tags: ['职业列表', 'MLTSSL', '技术移民']
+    tags: ['491签证', '职业评估', '技术移民']
   },
   {
     id: '23',
-    title: '澳大利亚州担保优先职业类别汇总',
-    summary: '汇总澳大利亚各州担保优先职业类别，助您选择最佳移民路径。',
-    source: '各州政府',
+    title: '491签证最低分数要求',
+    summary: '491签证EOI最低分数要求65分的详解，如何计算和达到分数要求。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-09',
-    tags: ['优先职业', '州担保', '移民指南']
+    tags: ['491签证', 'EOI分数', '技术移民']
   },
   {
     id: '24',
-    title: '澳大利亚高等教育体系深度解析',
-    summary: '全面介绍澳大利亚大学教育质量、学制和热门专业选择。',
-    source: 'Study Australia',
+    title: '491签证审理周期和流程',
+    summary: '491签证从申请到获批的完整审理流程和各阶段时间节点。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-08',
-    tags: ['高等教育', '大学', '热门专业']
+    tags: ['491签证', '审理周期', '申请流程']
   },
   {
     id: '25',
-    title: '澳大利亚TAFE职业教育优势分析',
-    summary: '详解TAFE职业教育的优势、学费和就业前景。',
-    source: 'Study Australia',
+    title: '491签证偏远地区定义和范围',
+    summary: '澳大利亚官方定义的偏远地区范围，包括哪些城市和地区符合要求。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-07',
-    tags: ['TAFE', '职业教育', '技术培训']
+    tags: ['491签证', '偏远地区', '地区定义']
   },
   {
     id: '26',
-    title: '澳大利亚移民监要求详解',
-    summary: '详解澳大利亚永久居民签证的居住要求（移民监）计算方法。',
+    title: '491签证常见被拒原因和避免方法',
+    summary: '分析491签证申请常见被拒原因，提供避免拒签的实用建议。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-06',
-    tags: ['移民监', '居住要求', '永居']
+    tags: ['491签证', '拒签原因', '避免方法']
   },
   {
     id: '27',
-    title: '澳大利亚入籍政策最新变化',
-    summary: '澳大利亚入籍申请的最新要求、审批时间和注意事项。',
-    source: '澳大利亚移民局 (Department of Home Affairs)',
+    title: '491签证优势职业推荐',
+    summary: '491签证最容易获邀的职业推荐，包括医疗、IT、工程等热门领域。',
+    source: '各州政府',
     createdAt: '2026-03-05',
-    tags: ['入籍', '公民申请', 'PR转公民']
+    tags: ['491签证', '热门职业', '推荐职业']
   },
   {
     id: '28',
-    title: '澳大利亚过桥签证BVA/BVB/BVC详解',
-    summary: '详解各类过桥签证的适用范围和注意事项。',
+    title: '491签证配偶和家属同行',
+    summary: '491签证配偶和家属的申请要求和权利，携带家属的注意事项。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-04',
-    tags: ['过桥签证', 'BVA', '签证过渡']
+    tags: ['491签证', '配偶签证', '家庭成员']
   },
   {
     id: '29',
-    title: '澳大利亚签证优先审理服务介绍',
-    summary: '移民局提供的优先审理服务及额外费用说明。',
+    title: '491签证费用和成本详解',
+    summary: '491签证申请的全部费用，包括政府费用、评估费用、体检费用等。',
     source: '澳大利亚移民局 (Department of Home Affairs)',
     createdAt: '2026-03-03',
-    tags: ['优先审理', '加急服务', '签证加速']
+    tags: ['491签证', '申请费用', '签证成本']
   },
   {
     id: '30',
-    title: '澳大利亚移民局最新数据报告',
-    summary: '澳大利亚移民局发布最新签证审批数据，包括各类签证的审批率和审理时间。',
-    source: '澳大利亚移民局 (Department of Home Affairs)',
+    title: '491签证成功案例分析',
+    summary: '通过真实案例分析491签证申请的成功要点和经验总结。',
+    source: '移民中介',
     createdAt: '2026-03-02',
-    tags: ['数据报告', '审批率', '审理时间']
+    tags: ['491签证', '成功案例', '经验分享']
+  },
+  {
+    id: '31',
+    title: '491签证境内和境外申请区别',
+    summary: '491签证境内申请和境外申请的区别、优势和注意事项。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-03-01',
+    tags: ['491签证', '境内申请', '境外申请']
+  },
+  {
+    id: '32',
+    title: '491签证有效期和签证条款',
+    summary: '491签证的有效期、签证条款和需要注意的禁止事项。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-02-29',
+    tags: ['491签证', '签证条款', '有效期']
+  },
+  {
+    id: '33',
+    title: '491签证下签后必须做的事情',
+    summary: '491签证获批后需要立即办理的重要事项，包括Tax File Number、银行开户等。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-02-28',
+    tags: ['491签证', '下签后', '注意事项']
+  },
+  {
+    id: '34',
+    title: '491签证疫情期间特殊政策',
+    summary: '疫情期间491签证的特殊政策调整，包括远程工作、居住灵活性等。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-02-27',
+    tags: ['491签证', '疫情政策', '特殊政策']
+  },
+  {
+    id: '35',
+    title: '491签证与189/190签证如何选择',
+    summary: '技术移民三条主要路径189、190、491的对比和选择建议。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-02-26',
+    tags: ['491签证', '189签证', '190签证', '选择建议']
+  },
+  {
+    id: '36',
+    title: '491签证常见问题解答FAQ',
+    summary: '关于491签证申请最常见的20个问题详细解答。',
+    source: '澳大利亚移民局 (Department of Home Affairs)',
+    createdAt: '2026-02-25',
+    tags: ['491签证', 'FAQ', '常见问题']
   }
 ]
 
@@ -278,9 +326,9 @@ export default function Home() {
           <span className="text-2xl">🏆</span>
           <p className="font-semibold mt-2">189独立技术移民</p>
         </Link>
-        <Link href="/tag/190" className="bg-white p-4 rounded-lg shadow hover:shadow-md text-center">
+        <Link href="/tag/491" className="bg-white p-4 rounded-lg shadow hover:shadow-md text-center">
           <span className="text-2xl">🏅</span>
-          <p className="font-semibold mt-2">190州担保</p>
+          <p className="font-semibold mt-2">491偏远地区签证</p>
         </Link>
       </section>
 
