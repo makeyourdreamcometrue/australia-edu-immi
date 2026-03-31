@@ -1,4 +1,4 @@
-# 澳大利亚留学移民资讯网
+# 澳大利亚留学移民资讯网 v2.0
 
 澳大利亚留学移民最新政策、签证动态、州担保信息发布平台。
 
@@ -8,39 +8,23 @@
 - 📝 自动生成中文资讯文章
 - 🏷️ 智能分类和标签系统
 - 📱 响应式设计，支持多设备访问
+- ✅ 静态页面 - 无需数据库即可访问
+- ⚡ 快速加载 - Vercel CDN
 
 ## 技术栈
 
 - **前端**: Next.js 14 + React + TypeScript
 - **样式**: Tailwind CSS
-- **数据库**: PostgreSQL + Prisma
 - **部署**: Vercel
-- **爬虫**: Cheerio + Axios
+- **静态生成**: SSG - 快速的页面加载
 
-## 数据库模型
+## 页面结构
 
-```prisma
-model Article {
-  id          String   @id @default(cuid())
-  title       String
-  summary     String   @db.Text
-  content     String   @db.Text
-  impact      String   @db.Text
-  source      String
-  sourceUrl   String?
-  tags        String[]
-  published   Boolean  @default(false)
-  createdAt   DateTime @default(now())
-}
-
-model CrawlLog {
-  id        String   @id @default(cuid())
-  source    String
-  url       String
-  status    String
-  createdAt DateTime @default(now())
-}
-```
+- `/` - 首页
+- `/news` - 资讯列表
+- `/visa` - 签证政策
+- `/education` - 教育资讯
+- `/about` - 关于我们
 
 ## 快速开始
 
@@ -48,32 +32,14 @@ model CrawlLog {
 # 安装依赖
 npm install
 
-# 设置环境变量
-cp .env.example .env
-# 编辑 .env 添加 DATABASE_URL
-
-# 运行开发服务器
+# 本地开发
 npm run dev
 
-# 抓取新闻（需要先设置 DATABASE_URL）
-npm run crawl
-
-# 生成每日资讯
-npm run daily
+# 构建静态页面
+npm run build
 ```
 
-## 自动化
+## 自动部署
 
-- **每日生成**: `npm run daily` - 生成当日新闻文章
-- **周报摘要**: 周日自动生成一周政策回顾
-- **部署**: 连接 Vercel 自动部署
-
-## 官方信息来源
-
-- 澳大利亚移民局 (Department of Home Affairs)
-- Study Australia
-- 新南威尔士州移民局
-- 维多利亚州移民局
-- 昆士兰州移民局
-- 西澳大利亚州移民局
-- 南澳大利亚州移民局
+- GitHub 自动部署到 Vercel
+- 推送自动触发构建
