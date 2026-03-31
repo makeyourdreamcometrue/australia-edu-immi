@@ -1,8 +1,13 @@
 {
+  "github": {
+    "silent": true
+  },
   "crons": [
     {
       "path": "/api/cron/generate",
       "schedule": "0 6 * * *"
     }
-  ]
+  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
 }
