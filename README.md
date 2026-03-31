@@ -77,3 +77,4 @@ npm run daily
 - 昆士兰州移民局
 - 西澳大利亚州移民局
 - 南澳大利亚州移民局
+- ABC Australia news
