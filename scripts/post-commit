@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+/**
+ * Git post-commit hook for auto-deploy
+ * Add to .git/hooks/post-commit
+ */
+
+const { execSync } = require("child_process");
+const DEPLOY_HOOK = "https://api.vercel.com/v1/integrations/deploy/prj_D0kJDLeqbxlICE0UVBAc5qRLf9JH/MlOZ6IVmkw";
+
+try {
+  // Check if there's something to commit
+  const status = execSync("git status --porcelain", { encoding: "utf8" });
+  
+  if (status.trim()) {
+    console.log("🚀 Files changed, auto-deploying...");
+    await fetch(DEPLOY_HOOK, { method: "POST" });
+    console.log("✅ Deployment triggered!");
+  }
+} catch (e) {
+  // Ignore errors
+}

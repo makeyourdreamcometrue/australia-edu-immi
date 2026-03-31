@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+/**
+ * Git post-commit hook for auto-deploy
+ * Auto-triggers Vercel deployment after each commit
+ */
+
+const DEPLOY_HOOK = "https://api.vercel.com/v1/integrations/deploy/prj_D0kJDLeqbxlICE0UVBAc5qRLf9JH/MlOZ6IVmkw";
+const PROJECT_NAME = "australia-edu-immi";
+
+async function main() {
+  console.log(`🚀 Auto-deploying ${PROJECT_NAME} to Vercel...`);
+  
+  try {
+    const response = await fetch(DEPLOY_HOOK, {
+      method: "POST",
+    });
+
+    if (response.ok || response.status === 201) {
+      console.log("✅ Deployment triggered successfully!");
+      console.log("   Check https://vercel.com/dashboard for status");
+    } else {
+      console.log("⚠️  Deployment response:", response.status);
+    }
+  } catch (error) {
+    console.log("❌ Deployment error:", error.message);
+  }
+}
+
+main();
