@@ -4,7 +4,10 @@ const prisma = new PrismaClient()
 
 export const dynamic = 'force-dynamic'
 
-export async function GET(request, { params }) {
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
   try {
     const { id } = params
     const article = await prisma.article.findUnique({
@@ -17,6 +20,6 @@ export async function GET(request, { params }) {
     
     return Response.json(article)
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 })
+    return Response.json({ error: (error as Error).message }, { status: 500 })
   }
 }
